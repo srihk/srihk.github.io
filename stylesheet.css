@@ -1,3 +1,24 @@
 body {
     font-family: monospace;
+    background-color: #041F1E;
+}
+
+h1,
+h2,
+p,
+li {
+    color: #A4C2A8;
+}
+
+a:link {
+    color: #87FF65;
+}
+
+a:visited {
+    color: #ACEB98;
+}
+
+a:hover {
+    color: rgb(255, 255, 255);
+    font-weight: bolder;
 }
