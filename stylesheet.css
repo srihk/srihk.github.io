@@ -29,6 +29,10 @@ iframe {
     max-width: 100%;
 }
 
+ul {
+    padding-left: 2%;
+}
+
 figure {
     display: inline-block;
     margin-left: 0%;
