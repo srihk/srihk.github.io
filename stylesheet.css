@@ -28,3 +28,12 @@ video,
 iframe {
     max-width: 100%;
 }
+
+figure {
+    display: inline-block;
+}
+
+.image-list {
+    column-width: 25em;
+    list-style: none;
+}
