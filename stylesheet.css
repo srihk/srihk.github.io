@@ -1,12 +1,6 @@
 body {
     font-family: monospace;
     background-color: #041F1E;
-}
-
-h1,
-h2,
-p,
-li {
     color: #A4C2A8;
 }
 
@@ -29,17 +23,15 @@ iframe {
     max-width: 100%;
 }
 
-ul {
-    padding-left: 2%;
-}
-
 figure {
-    display: inline-block;
-    margin-left: 0%;
+    margin: 1em;
 }
 
-.image-list {
-    column-width: 25em;
-    list-style: none;
-    padding-left: 0%;
+.gallery {
+    display: flex;
+    flex-wrap: wrap;
+}
+
+.gallery figure {
+    max-width: 25em;
 }
