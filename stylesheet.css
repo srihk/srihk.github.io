@@ -1,20 +1,52 @@
-body {
-    font-family: monospace;
-    background-color: #041F1E;
-    color: #A4C2A8;
+@font-face {
+    font-family: 'JetBrains Mono';
+    src: local('JetBrains Mono'), url(/assets/fonts/JetBrainsMono-VariableFont_wght.ttf);
 }
 
-a:link {
-    color: #87FF65;
+html {
+    height: 100vh;
+}
+
+body {
+    display: flex;
+    flex-direction: column;
+    font-family: 'JetBrains Mono', monospace;
+    min-height: 100%;
+    margin-top: 0%;
+    margin-bottom: 0%;
+}
+
+footer {
+    justify-self: flex-end;
+}
+
+.intro {
+    display: flex;
+    flex-direction: column;
+    flex-grow: 1;
+    justify-content: center;
+}
+
+.name {
+    margin-top: 0;
+    font-size: min(5em, 10vw);
+}
+
+figcaption {
+    font-weight: 100;
+}
+
+a {
+    color: royalblue;
+    text-decoration: none;
 }
 
 a:visited {
-    color: #ACEB98;
+    color: royalblue;
 }
 
 a:hover {
-    color: rgb(255, 255, 255);
-    font-weight: bolder;
+    text-decoration: underline;
 }
 
 img,
@@ -33,5 +65,5 @@ figure {
 }
 
 .gallery figure {
-    max-width: 25em;
+    max-width: 20em;
 }
