@@ -12,8 +12,8 @@ body {
     flex-direction: column;
     font-family: 'JetBrains Mono', monospace;
     min-height: 100%;
-    margin-top: 0%;
-    margin-bottom: 0%;
+    max-width: 70em;
+    margin: auto;
 }
 
 footer {
@@ -55,15 +55,59 @@ iframe {
     max-width: 100%;
 }
 
-figure {
-    margin: 1em;
-}
-
 .gallery {
+    max-width: 30em;
     display: flex;
-    flex-wrap: wrap;
+    flex-direction: column;
+    background-color: rgb(217, 225, 249);
+    border-radius: 25px;
+    padding: 25px;
 }
 
 .gallery figure {
-    max-width: 20em;
+    height: 40em;
+    flex-grow: 1;
+    display: flex;
+    flex-direction: column;
+    margin: auto;
+}
+
+.gallery figure img,
+.gallery figure video {
+    margin: auto;
+    align-self: center;
+}
+
+.gallery figure figcaption {
+    margin-top: 1em;
+}
+
+.gallery .thumbs {
+    margin-top: 1em;
+}
+
+.gallery .thumbs .thumb {
+    object-fit: cover;
+    height: 50px;
+    border-style:double;
+    border-color: royalblue;
+    box-sizing: border-box;
+    border-radius: 25px;
+}
+
+.project {
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    justify-content: center;
+}
+
+.project .project-details {
+    max-width: 30em;
+    padding: 2em;
+    margin: auto;
+}
+
+.project > figure {
+    max-width: 30em;
 }

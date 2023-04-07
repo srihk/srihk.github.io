@@ -1,0 +1,47 @@
+[
+    {
+        "type": "img",
+        "src": "300px-fluid-levelset-representation.png",
+        "caption": "Visualization of a 2D slice of the fluid level-set representation in a liquid simulation. (Display Thickness used: 0.02)"
+    },
+    {
+        "type": "img",
+        "src": "300px-fluid-flags.png",
+        "caption": "Visualization of a 2D slice of the flags grid in a liquid domain. (Display Thickness used: 0.03)"
+    },
+    {
+        "type": "img",
+        "src": "300px-fluid-MAC-vectors.png",
+        "caption": "MAC Grid visualization for a 2D slice of the velocity vector field in a liquid simulation."
+    },
+    {
+        "type": "img",
+        "src": "flags.gif",
+        "caption": "A 2D slice of the flag grid in a liquid domain, with gridlines."
+    },
+    {
+        "type": "img",
+        "src": "flags-gridlines.gif",
+        "caption": "A 2D slice of the flag grid visualized on the gridlines in a liquid domain."
+    },
+    {
+        "type": "img",
+        "src": "pressure.gif",
+        "caption": "A 2D slice of the pressure grid in a gas domain."
+    },
+    {
+        "type": "img",
+        "src": "velocity-MACgrid.gif",
+        "caption": "MAC grid visualization of a 2D slice of the velocity grid in a gas domain."
+    },
+    {
+        "type": "img",
+        "src": "range-highlighting.gif",
+        "caption": "Range highlighting options."
+    },
+    {
+        "type": "video",
+        "src": "cell-filtering.mp4",
+        "caption": "Cell filtering on a slice of the fluid level-set grid in a liquid domain."
+    }
+]
