@@ -4,7 +4,12 @@
 }
 
 html {
-    height: 100vh;
+    height: 100%;
+}
+
+.dark {
+    background-color: rgb(0, 0, 0);
+    color: white;
 }
 
 body {
@@ -14,6 +19,7 @@ body {
     min-height: 100%;
     max-width: 70em;
     margin: auto;
+    background-color: rgb(255, 255, 255);
 }
 
 footer {
@@ -59,7 +65,7 @@ iframe {
     max-width: 30em;
     display: flex;
     flex-direction: column;
-    background-color: rgb(217, 225, 249);
+    background-color: rgba(65, 105, 225, 0.1);
     border-radius: 25px;
     padding: 25px;
 }
@@ -89,10 +95,11 @@ iframe {
 .gallery .thumbs .thumb {
     object-fit: cover;
     height: 50px;
-    border-style:double;
-    border-color: royalblue;
+    border-style: solid;
+    border-color: rgb(65, 105, 225, 0.2);
     box-sizing: border-box;
     border-radius: 25px;
+    cursor: pointer;
 }
 
 .project {
@@ -110,4 +117,27 @@ iframe {
 
 .project > figure {
     max-width: 30em;
+}
+
+canvas {
+    position: fixed;
+    top: 0;
+    left: 0;
+    z-index: -1;
+}
+
+.dark-toggle {
+    float: right;
+}
+
+.dark-toggle:hover {
+    cursor: pointer;
+}
+
+.dark-toggle::after {
+    content: "☀️";
+}
+
+.dark .dark-toggle::after {
+    content: "🌙";
 }

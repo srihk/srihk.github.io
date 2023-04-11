@@ -47,8 +47,17 @@ function createGallery(elementId, assetPath) {
 
                 return figure;
             }
+
+            function updateThumbs(thumbs, previousState, currentState) {
+                const thumbColorRGB = "65, 105, 225";
+
+                thumbs.childNodes[previousState].style.backgroundColor = `rgba(${thumbColorRGB}, 0.2)`;
+                thumbs.childNodes[currentState].style.backgroundColor = `rgba(${thumbColorRGB}, 0.8)`;
+            }
             
             const thumbs = document.createElement("div");
+
+            let state = 0;
             thumbs.setAttribute("class", "thumbs");
             const gallery = document.getElementById(elementId);
             figures.forEach((fig, index) => {
@@ -61,13 +70,17 @@ function createGallery(elementId, assetPath) {
                 media.setAttribute("width", `${thumbWidth}%`);
                 thumbs.appendChild(media);
             });
+            updateThumbs(thumbs, state, state);
+
             thumbs.addEventListener(
                 "click",
                 (event) => {
                     if (event.target === event.currentTarget) {
                         return;
                     }
-                    const state = event.target.getAttribute("index");
+                    const previousState = state;
+                    state = event.target.getAttribute("index");
+                    updateThumbs(thumbs, previousState, state);
                     document.getElementById(`${elementId}.figure`).remove();
                     gallery.insertBefore(createFigure(figures, state), gallery.firstChild);
                 }
