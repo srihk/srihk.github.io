@@ -1,11 +1,19 @@
 const toggle = document.querySelector(".dark-toggle");
-const theme = localStorage.getItem("theme");
+let theme = localStorage.getItem("theme");
 const body = document.querySelector("body");
 
 const Theme = {
     DARK: "dark",
     LIGHT: "light"
 };
+
+if (theme === null) {
+    if (window.matchMedia('(prefers-color-scheme: dark)').matches) {
+        theme = Theme.DARK;
+    } else {
+        theme = Theme.LIGHT;
+    }
+}
 
 if (theme === Theme.DARK) {
     if (!body.classList.contains(Theme.DARK)) {
