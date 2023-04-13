@@ -20,6 +20,8 @@ body {
     max-width: 70em;
     margin: auto;
     background-color: rgb(255, 255, 255);
+    padding: 1em;
+    box-sizing: border-box;
 }
 
 footer {
@@ -112,6 +114,7 @@ iframe {
 .project .project-details {
     max-width: 30em;
     padding: 2em;
+    box-sizing: border-box;
     margin: auto;
 }
 

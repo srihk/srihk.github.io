@@ -5,8 +5,12 @@ const ctx = canvas.getContext("2d");
 const width = canvas.width = window.innerWidth;
 const height = canvas.height = window.innerHeight;
 
-function getStyle() {
+function getBackgroundColor() {
     return `rgba(${getComputedStyle(document.querySelector("body")).backgroundColor.replace(/[^\d,]/g, " ")}, 0.25)`;
+}
+
+function getColor() {
+    return `rgba(${getComputedStyle(document.querySelector("body")).color.replace(/[^\d,]/g, " ")}, 0.25)`;
 }
 
 function randomInt(min, max) {
@@ -140,6 +144,10 @@ class Player extends Shape {
             alpha = 0.2;
             this.x = width - 50;
             this.y = height - 50;
+        } else {
+            ctx.font = "10px JetBrains Mono";
+            ctx.fillStyle = getColor();
+            ctx.fillText("Press ESC to release all the collected balls.", width - 270, height);
         }
 
         const color = `rgba(${this.color.replace(/[^\d,]/g, " ")}, ${alpha})`;
@@ -224,7 +232,7 @@ while (balls.length < 25) {
 }
 
 function loop() {
-    ctx.fillStyle = getStyle();
+    ctx.fillStyle = getBackgroundColor();
     ctx.fillRect(0, 0, width, height);
 
     for (const ball of balls) {
