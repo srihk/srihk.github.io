@@ -115,7 +115,7 @@ iframe {
     max-width: 30em;
     padding: 2em;
     box-sizing: border-box;
-    margin: auto;
+    margin: 0 auto auto auto;
 }
 
 .project > figure {
