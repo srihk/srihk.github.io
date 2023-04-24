@@ -1,146 +1,146 @@
 @font-face {
-    font-family: 'JetBrains Mono';
-    src: local('JetBrains Mono'), url(/assets/fonts/JetBrainsMono-VariableFont_wght.ttf);
+  font-family: 'JetBrains Mono';
+  src: local('JetBrains Mono'), url(/assets/fonts/JetBrainsMono-VariableFont_wght.ttf);
 }
 
 html {
-    height: 100%;
+  height: 100%;
 }
 
 .dark {
-    background-color: rgb(0, 0, 0);
-    color: white;
+  background-color: rgb(0, 0, 0);
+  color: white;
 }
 
 body {
-    display: flex;
-    flex-direction: column;
-    font-family: 'JetBrains Mono', monospace;
-    min-height: 100%;
-    max-width: 70em;
-    margin: auto;
-    background-color: rgb(255, 255, 255);
-    padding: 1em;
-    box-sizing: border-box;
+  display: flex;
+  flex-direction: column;
+  font-family: 'JetBrains Mono', monospace;
+  min-height: 100%;
+  max-width: 70em;
+  margin: auto;
+  background-color: rgb(255, 255, 255);
+  padding: 1em;
+  box-sizing: border-box;
 }
 
 footer {
-    justify-self: flex-end;
+  justify-self: flex-end;
 }
 
 .intro {
-    display: flex;
-    flex-direction: column;
-    flex-grow: 1;
-    justify-content: center;
+  display: flex;
+  flex-direction: column;
+  flex-grow: 1;
+  justify-content: center;
 }
 
 .name {
-    margin-top: 0;
-    font-size: min(5em, 10vw);
+  margin-top: 0;
+  font-size: min(5em, 10vw);
 }
 
 figcaption {
-    font-weight: 100;
+  font-weight: 100;
 }
 
 a {
-    color: royalblue;
-    text-decoration: none;
+  color: royalblue;
+  text-decoration: none;
 }
 
 a:visited {
-    color: royalblue;
+  color: royalblue;
 }
 
 a:hover {
-    text-decoration: underline;
+  text-decoration: underline;
 }
 
 img,
 video,
 iframe {
-    max-width: 100%;
+  max-width: 100%;
 }
 
 .gallery {
-    max-width: 30em;
-    display: flex;
-    flex-direction: column;
-    background-color: rgba(65, 105, 225, 0.1);
-    border-radius: 25px;
-    padding: 25px;
+  max-width: 30em;
+  display: flex;
+  flex-direction: column;
+  background-color: rgba(65, 105, 225, 0.1);
+  border-radius: 25px;
+  padding: 25px;
 }
 
 .gallery figure {
-    height: 40em;
-    flex-grow: 1;
-    display: flex;
-    flex-direction: column;
-    margin: auto;
+  height: 40em;
+  flex-grow: 1;
+  display: flex;
+  flex-direction: column;
+  margin: auto;
 }
 
 .gallery figure img,
 .gallery figure video {
-    margin: auto;
-    align-self: center;
+  margin: auto;
+  align-self: center;
 }
 
 .gallery figure figcaption {
-    margin-top: 1em;
+  margin-top: 1em;
 }
 
 .gallery .thumbs {
-    margin-top: 1em;
+  margin-top: 1em;
 }
 
 .gallery .thumbs .thumb {
-    object-fit: cover;
-    height: 50px;
-    border-style: solid;
-    border-color: rgb(65, 105, 225, 0.2);
-    box-sizing: border-box;
-    border-radius: 25px;
-    cursor: pointer;
+  object-fit: cover;
+  height: 50px;
+  border-style: solid;
+  border-color: rgb(65, 105, 225, 0.2);
+  box-sizing: border-box;
+  border-radius: 25px;
+  cursor: pointer;
 }
 
 .project {
-    display: flex;
-    flex-wrap: wrap;
-    align-items: center;
-    justify-content: center;
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  justify-content: center;
 }
 
 .project .project-details {
-    max-width: 30em;
-    padding: 2em;
-    box-sizing: border-box;
-    margin: 0 auto auto auto;
+  max-width: 30em;
+  padding: 2em;
+  box-sizing: border-box;
+  margin: 0 auto auto auto;
 }
 
-.project > figure {
-    max-width: 30em;
+.project>figure {
+  max-width: 30em;
 }
 
 canvas {
-    position: fixed;
-    top: 0;
-    left: 0;
-    z-index: -1;
+  position: fixed;
+  top: 0;
+  left: 0;
+  z-index: -1;
 }
 
 .dark-toggle {
-    float: right;
+  float: right;
 }
 
 .dark-toggle:hover {
-    cursor: pointer;
+  cursor: pointer;
 }
 
 .dark-toggle::after {
-    content: "☀️";
+  content: "☀️";
 }
 
 .dark .dark-toggle::after {
-    content: "🌙";
+  content: "🌙";
 }
