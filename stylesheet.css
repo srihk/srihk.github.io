@@ -63,12 +63,16 @@ iframe {
   max-width: 100%;
 }
 
+.project-media {
+  margin-left: auto;
+}
+
 .gallery {
-  max-width: 30em;
   display: flex;
   flex-direction: column;
   background-color: rgba(65, 105, 225, 0.1);
   border-radius: 25px;
+  max-width: 30em;
   padding: 25px;
 }
 
@@ -117,7 +121,7 @@ iframe {
   margin: 0 auto auto 0;
 }
 
-.project>figure {
+.project-media > figure {
   max-width: 30em;
 }
 
