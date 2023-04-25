@@ -20,7 +20,7 @@ body {
   max-width: 70em;
   margin: auto;
   background-color: rgb(255, 255, 255);
-  padding: 2em;
+  padding: 1em;
   box-sizing: border-box;
 }
 
@@ -113,6 +113,7 @@ iframe {
   flex-wrap: wrap;
   align-items: center;
   justify-content: center;
+  margin: 2em 0;
 }
 
 .project .project-details {
