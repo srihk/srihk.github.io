@@ -122,8 +122,9 @@ iframe {
   margin: 0 auto auto 0;
 }
 
-.project-media > figure {
+.project-media {
   max-width: 30em;
+  display: flex;
 }
 
 canvas {
