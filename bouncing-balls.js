@@ -97,6 +97,22 @@ class Player extends Shape {
         ENABLED: "enabled",
         RELEASING: "releasing"
     }
+
+    updatePosition() {
+        // Position is updated via keyboard events
+        if (this.movLeft) {
+            this.x -= this.velX;
+        }
+        if (this.movRight) {
+            this.x += this.velX;
+        }
+        if (this.movUp) {
+            this.y -= this.velY;
+        }
+        if (this.movDown) {
+            this.y += this.velY;
+        }
+    }
     
     constructor(x, y) {
         super(x, y, 10, 10);
@@ -104,6 +120,10 @@ class Player extends Shape {
         this.size = 20;
         this.state = Player.State.DISABLED;
         this.balls = [];
+        this.movLeft = false;
+        this.movRight = false;
+        this.movUp = false;
+        this.movDown = false;
 
         window.addEventListener("keydown", (event) => {
             if (this.state === Player.State.DISABLED) {
@@ -116,22 +136,39 @@ class Player extends Shape {
 
             switch(event.key) {
                 case "a":
-                    this.x -= this.velX;
+                    this.movLeft = true;
                     break;
                 case "d":
-                    this.x += this.velX;
+                    this.movRight = true;
                     break;
                 case "w":
-                    this.y -= this.velY;
+                    this.movUp = true;
                     break;
                 case "s":
-                    this.y += this.velY;
+                    this.movDown = true;
                     break;
                 case "Escape":
                     if (this.state === Player.State.ENABLED) {
                         this.state = Player.State.RELEASING;
                         this.releaseBalls();
                     }
+                    break;
+            }
+        });
+
+        window.addEventListener("keyup", (event) => {
+            switch(event.key) {
+                case "a":
+                    this.movLeft = false;
+                    break;
+                case "d":
+                    this.movRight = false;
+                    break;
+                case "w":
+                    this.movUp = false;
+                    break;
+                case "s":
+                    this.movDown = false;
                     break;
             }
         });
@@ -157,6 +194,7 @@ class Player extends Shape {
         ctx.stroke();
         ctx.font = "20px JetBrains Mono";
         ctx.fillStyle = color;
+        this.updatePosition();
         if (this.state === Player.State.DISABLED) {
             ctx.fillText("wa", this.x - (this.size / 5) * 3, this.y - 2);
             ctx.fillText("sd", this.x - (this.size / 5) * 3, this.y + this.size / 1.6);
